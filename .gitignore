@@ -1,10 +1,2 @@
 .DS_Store
 bazel-*
-*.xcodeproj
-*.xcworkspace
-*.tulsiconf-user
-*.tulsiproj
-tulsigen-*
-/projects
-/generated
-PodsConfig/Pods
