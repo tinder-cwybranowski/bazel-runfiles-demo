@@ -1,9 +1,11 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+RULES_APPLE_GIT_SHA = "708e74b2eeb6fb0e950bcfcdcb804bf59cbec117"
 http_archive(
     name = "build_bazel_rules_apple",
-    sha256 = "a5f00fd89eff67291f6cd3efdc8fad30f4727e6ebb90718f3f05bbf3c3dd5ed7",
-    url = "https://github.com/bazelbuild/rules_apple/releases/download/0.33.0/rules_apple.0.33.0.tar.gz",
+    sha256 = "537e27436db7c9596226c8e99d3641e062e12a0098042e4788d6f08552cd4287",
+    url = "https://github.com/tinder-cwybranowski/rules_apple/archive/%s.zip" % RULES_APPLE_GIT_SHA,
+    strip_prefix = "rules_apple-%s" % RULES_APPLE_GIT_SHA
 )
 
 load(
