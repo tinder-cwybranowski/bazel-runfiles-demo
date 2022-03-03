@@ -44,3 +44,12 @@ http_archive(
     build_file = "PathKit/BUILD",
     strip_prefix = "PathKit-%s" % PATHKIT_GIT_SHA
 )
+
+SWIFT_SNAPSHOT_TESTING_GIT_SHA = "c466812aa2e22898f27557e2e780d3aad7a27203"
+http_archive(
+    name = "SwiftSnapshotTesting",
+    url = "https://github.com/pointfreeco/swift-snapshot-testing/archive/%s.zip" % SWIFT_SNAPSHOT_TESTING_GIT_SHA,
+    sha256 = "fc37a90810c9ea402ab5612b4942ad1a22ae8105bbdd36cc64e0912343ad4a90",
+    build_file = "SwiftSnapshotTesting/BUILD",
+    strip_prefix = "swift-snapshot-testing-%s" % SWIFT_SNAPSHOT_TESTING_GIT_SHA
+)
