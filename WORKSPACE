@@ -35,3 +35,12 @@ load(
 )
 
 apple_support_dependencies()
+
+PATHKIT_GIT_SHA = "73f8e9dca9b7a3078cb79128217dc8f2e585a511"
+http_archive(
+    name = "PathKit",
+    url = "https://github.com/kylef/PathKit/archive/%s.zip" % PATHKIT_GIT_SHA,
+    sha256 = "39a5dfd87e4eeab2e6be19da966f4e35093872a271e8aa754457ead5241db703",
+    build_file = "PathKit/BUILD",
+    strip_prefix = "PathKit-%s" % PATHKIT_GIT_SHA
+)
