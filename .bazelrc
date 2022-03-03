@@ -1,0 +1,5 @@
+# [CW] 3/3/22 - local won't work until we find a variable / mechanism that
+# can expand to the path to the WORKSPACE on the local machine.
+test:local --test_env=SNAPSHOT_DIRECTORY=$HOME
+test:remote --test_env=SNAPSHOT_DIRECTORY=$TEST_SRCDIR
+test --test_output=all
