@@ -1,3 +1,5 @@
+config ?= remote
+
 .PHONY: test
 test:
-	bazelisk test //DemoLibrary:DemoTests --test_output=all
+	bazelisk test //DemoLibrary:DemoTests --config=$(config)

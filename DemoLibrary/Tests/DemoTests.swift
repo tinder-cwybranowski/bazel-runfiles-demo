@@ -1,7 +1,13 @@
 @testable import Demo
+import TestKit
 import XCTest
 
 final class DemoTests: XCTestCase {
+
+    override func setUp() {
+        super.setUp()
+        isRecording = false
+    }
 
     func testDemo_value() {
         // GIVEN
@@ -11,7 +17,7 @@ final class DemoTests: XCTestCase {
         let output: Int = input.value
 
         // THEN
-        XCTAssertEqual(output, 100)
+        assertSnapshot(matching: "\(output)\n", as: .lines)
     }
 
     // [CW] 3/2/22 - 'TEST_SRCDIR' should be available in the environment per:

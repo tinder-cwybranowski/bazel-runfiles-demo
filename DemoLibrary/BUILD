@@ -17,16 +17,17 @@ swift_library(
         "Tests/DemoTests.swift"
     ],
     deps = [
-        ":Demo"
+        ":Demo",
+        "//TestKit:TestKit",
     ],
     visibility = ["//visibility:public"],
 )
 
 ios_unit_test(
     name = "DemoTests",
-    data = [
-        "Data/demo-fixture.txt"
-    ],
+    data = glob([
+        "Data/*.txt"
+    ]),
     deps = [
         ":DemoTests_Library"
     ],
